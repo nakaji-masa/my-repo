@@ -10,5 +10,7 @@ on:
 jobs:
   run:
    runs-on: ubuntu-latest
+   env:
+    BRANCH: main
    steps:
-     - run: echo "${{ inputs.greetings }}"
+     - run: echo "${{ env.BRANCH }}"
